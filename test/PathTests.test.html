@@ -1,0 +1,161 @@
+*{ You can use plain selenium command using the selenium tag }*
+
+#{selenium}
+    // Open the home page, and check that no error occured
+    open('/')
+    assertNotTitle('Application error')
+#{/selenium}
+
+#{selenium 'Testing key Hello'}
+    open('/')
+    type('name', 'Hello')
+    clickAndWait('button')
+    clickAndWait('//a[1]')
+    verifyText('result','[Hello]')
+#{/selenium}
+
+#{selenium 'Testing key <xxx>'}
+    open('/')
+    type('name', '<xxx>')
+    clickAndWait('button')
+    clickAndWait('//a[1]')
+    verifyText('result','[<xxx>]')
+#{/selenium}
+
+#{selenium 'Testing key "'}
+    open('/')
+    type('name', '"')
+    clickAndWait('button')
+    clickAndWait('//a[1]')
+    verifyText('result','["]')
+#{/selenium}
+
+#{selenium 'Testing key /'}
+    open('/')
+    type('name', '/')
+    clickAndWait('button')
+    clickAndWait('//a[1]')
+    verifyText('result','[/]')
+#{/selenium}
+
+#{selenium 'Testing key " "'}
+    // type is trimming spaces, so we have to enclose the space parameter with something
+    open('/')
+    type('name', 'x x')
+    clickAndWait('button')
+    clickAndWait('//a[1]')
+    verifyText('result','[x x]')
+#{/selenium}
+
+#{selenium 'Testing key "   "'}
+    // type is trimming spaces, so we have to enclose the space parameter with something
+    open('/')
+    type('name', 'x   x')
+    clickAndWait('button')
+    clickAndWait('//a[1]')
+    verifyText('result','[x   x]')
+#{/selenium}
+
+#{selenium 'Testing key +'}
+    open('/')
+    type('name', '+')
+    clickAndWait('button')
+    clickAndWait('//a[1]')
+    verifyText('result','[+]')
+#{/selenium}
+
+#{selenium 'Testing key äöüßéèê'}
+    open('/')
+    type('name', 'äöüßéèê')
+    clickAndWait('button')
+    clickAndWait('//a[1]')
+    verifyText('result','[äöüßéèê]')
+#{/selenium}
+
+#{selenium 'Testing key \''}
+    open('/')
+    type('name', '\'')
+    clickAndWait('button')
+    clickAndWait('//a[1]')
+    verifyText('result','[\']')
+#{/selenium}
+
+#{selenium 'Testing key \\'}
+    open('/')
+    type('name', '\')
+    clickAndWait('button')
+    clickAndWait('//a[1]')
+    verifyText('result','[\]')
+#{/selenium}
+
+#{selenium 'Testing key %'}
+    open('/')
+    type('name', '%')
+    clickAndWait('button')
+    clickAndWait('//a[1]')
+    verifyText('result','[%]')
+#{/selenium}
+
+#{selenium 'Testing key :'}
+    open('/')
+    type('name', ':')
+    clickAndWait('button')
+    clickAndWait('//a[1]')
+    verifyText('result','[:]')
+#{/selenium}
+
+#{selenium 'Testing key "@"'}
+    open('/')
+    type('name', '@')
+    clickAndWait('button')
+    clickAndWait('//a[1]')
+    verifyText('result','[@]')
+#{/selenium}
+
+#{selenium 'Testing key $'}
+    open('/')
+    type('name', '$')
+    clickAndWait('button')
+    clickAndWait('//a[1]')
+    verifyText('result','[$]')
+#{/selenium}
+
+#{selenium 'Testing key !'}
+    open('/')
+    type('name', '!')
+    clickAndWait('button')
+    clickAndWait('//a[1]')
+    verifyText('result','[!]')
+#{/selenium}
+
+#{selenium 'Testing key &'}
+    open('/')
+    type('name', '&')
+    clickAndWait('button')
+    clickAndWait('//a[1]')
+    verifyText('result','[&]')
+#{/selenium}
+
+#{selenium 'Testing key ?'}
+    open('/')
+    type('name', '?')
+    clickAndWait('button')
+    clickAndWait('//a[1]')
+    verifyText('result','[?]')
+#{/selenium}
+
+#{selenium 'Testing key ='}
+    open('/')
+    type('name', '=')
+    clickAndWait('button')
+    clickAndWait('//a[1]')
+    verifyText('result','[=]')
+#{/selenium}
+
+#{selenium 'Testing key ({[]})'}
+    open('/')
+    type('name', '({[]})')
+    clickAndWait('button')
+    clickAndWait('//a[1]')
+    verifyText('result','[({[]})]')
+#{/selenium}

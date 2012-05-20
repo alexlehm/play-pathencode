@@ -1,0 +1,9 @@
+#{extends 'main.html' /}
+#{set title:name /}
+
+<div id="result">[${name}]</div>
+
+<form id="form" action="@{Application.link()}" method="post">
+<input id="name" name="name"/>
+<input id="button" type="submit" value="Create"/>
+</form>
