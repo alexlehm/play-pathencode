@@ -1,0 +1,4 @@
+example project for playframework to exhibit a path encoding bug
+
+the selenium test for the project should pass if the bug is fixed.
+
